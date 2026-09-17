@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.37531.7 d17.14
+VisualStudioVersion = 17.14.37531.7
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logica", "Logica", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
@@ -14,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ex004", "ex004\ex004.csproj", "{915D8481-2898-4AA8-8F33-6D8E837C8CD4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ex005", "ex005\ex005.csproj", "{C6F5A321-25AC-431F-BD69-7E6FF237F9AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ex006", "ex006\ex006.csproj", "{F647D107-6C6C-4A3C-A643-A3DA28141006}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{C6F5A321-25AC-431F-BD69-7E6FF237F9AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6F5A321-25AC-431F-BD69-7E6FF237F9AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6F5A321-25AC-431F-BD69-7E6FF237F9AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F647D107-6C6C-4A3C-A643-A3DA28141006}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F647D107-6C6C-4A3C-A643-A3DA28141006}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F647D107-6C6C-4A3C-A643-A3DA28141006}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F647D107-6C6C-4A3C-A643-A3DA28141006}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -51,6 +57,7 @@ Global
 		{B20C4B0A-7A81-4861-AF0F-70C3C7F5F868} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{915D8481-2898-4AA8-8F33-6D8E837C8CD4} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{C6F5A321-25AC-431F-BD69-7E6FF237F9AD} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{F647D107-6C6C-4A3C-A643-A3DA28141006} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5B5C2315-6D78-4EE6-9E48-E306D825BE3D}
