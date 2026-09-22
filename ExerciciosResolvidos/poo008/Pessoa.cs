@@ -23,7 +23,7 @@ namespace poo008
 
         public void Apresentar()
         {
-            Console.WriteLine($"Olá, meu nome é {Nome}, tenho {Idade.ToString("F2", CultureInfo.InvariantCulture)} anos e {Altura}m de altura.");
+            Console.WriteLine($"Olá, meu nome é {Nome}, tenho {Idade} anos e {Altura.ToString("F2", CultureInfo.InvariantCulture)}m de altura.");
         }
     }
 }
