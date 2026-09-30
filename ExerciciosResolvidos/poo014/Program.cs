@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,32 +16,52 @@ namespace poo014
 
             List<Funcionario> funcionarios = new List<Funcionario>();
 
-            foreach (var f in funcionarios)
+            for (int i = 0; i < N; i++)
             {
-                f.Id = int.Parse(Console.ReadLine());
-                if(f.Id == funcionarios.FindIndex(x => x.Id == f.Id))
+                Console.Write($"Informe o ID do funcionário #{i + 1}: ");
+                int id = int.Parse(Console.ReadLine());
+
+                while (funcionarios.Any(x => x.Id == id))
                 {
-                    Console.WriteLine("Id Inválido, informe outro ID");
-                    return;
+                    Console.Write($"Informe o ID do funcionário #{i + 1}: ");
+                    id = int.Parse(Console.ReadLine());
                 }
-                else
-                {
-                    f.Nome = Console.ReadLine();
-                    decimal aumento = f.AlmentoSalarial(3);
 
-                    Funcionario funcionario = new Funcionario
-                    {
-                        Id = f.Id,
-                        Nome = f.Nome,
-                    };
+                Console.Write($"Informe o nome do funcionário #{i + 1}: ");
+                string nome = Console.ReadLine();
 
-                    funcionarios.Add(funcionario);
-                }    
+                Console.Write($"Informe o Salario do funcionário #{i + 1}: ");
+                decimal salario = decimal.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+                Funcionario funcionario = new Funcionario(id, nome, salario);
+
+                funcionarios.Add(funcionario);
             }
 
-            foreach (var f in funcionarios)
-            {
+            Console.WriteLine();
 
+            Console.Write("Informe o ID do funcionário que receberá aumento: ");
+            int idAumento = int.Parse(Console.ReadLine());
+
+            Funcionario funcionarioEncontrado = funcionarios.FirstOrDefault(
+                    x => x.Id == idAumento);
+
+            if (funcionarioEncontrado == null)
+                Console.WriteLine("Este Id não existe.");
+            else
+            {
+                Console.Write("Informe a porcentagem de aumento: ");
+                decimal porcentagem = decimal.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+                funcionarioEncontrado.AumentoSalarial(porcentagem);
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("Lista Atualizada.");
+
+            foreach (var funcionario in funcionarios)
+            {
+                Console.WriteLine($"Funcionário: {funcionario.Id}, Nome: {funcionario.Nome}, Salario: R${funcionario.Salario.ToString("F2", CultureInfo.InvariantCulture)}");
             }
         }
     }

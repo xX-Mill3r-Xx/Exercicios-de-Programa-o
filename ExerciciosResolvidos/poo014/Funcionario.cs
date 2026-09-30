@@ -6,10 +6,22 @@
         public string Nome { get; set; }
         public decimal Salario { get; private set; }
 
-        public decimal AlmentoSalarial(decimal porcentagem)
+        public Funcionario()
         {
-            porcentagem = Salario * 100 / 2.0M;
-            return porcentagem;
+                
+        }
+
+        public Funcionario(int id, string nome, decimal salario)
+        {
+            Id = id;
+            Nome = nome;
+            Salario = salario;
+        }
+
+        public void AumentoSalarial(decimal porcentagem)
+        {
+            decimal aumento = Salario * porcentagem / 100M;
+            Salario += aumento;
         }
     }
 }
