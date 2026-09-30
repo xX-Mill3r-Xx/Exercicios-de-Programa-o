@@ -1,5 +1,4 @@
 ﻿using poo017.Entities;
-using System;
 
 namespace poo017
 {
@@ -7,9 +6,9 @@ namespace poo017
     {
         static void Main(string[] args)
         {
-            BusinessAccount account = new BusinessAccount(8010, "Bob Brown", 100.0, 500.0);
+            Account acc = new Account(1001, "Alex", 0.0);
 
-            Console.WriteLine(account.Balance);
+            BusinessAccount bacc = new BusinessAccount(1002, "Maria", 0.0, 500.0);
         }
     }
 }
