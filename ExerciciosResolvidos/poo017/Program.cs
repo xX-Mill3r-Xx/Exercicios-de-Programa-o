@@ -1,4 +1,5 @@
 ﻿using poo017.Entities;
+using System;
 
 namespace poo017
 {
@@ -6,17 +7,14 @@ namespace poo017
     {
         static void Main(string[] args)
         {
-            Account acc = new Account(1001, "Alex", 0.0);
+            Account account = new Account(1001, "Alex", 500.0);
+            Account account1 = new SavingsAccount(1002, "Anna", 500.0, 0.01);
 
-            BusinessAccount bacc = new BusinessAccount(1002, "Maria", 0.0, 500.0);
+            account.WithDraw(10.0);
+            account1.WithDraw(10.0);
 
-            // upcasting
-            Account acc1 = bacc;
-            Account acc2 = new BusinessAccount(1003, "Bob", 0.0, 200.00);
-            Account acc3 = new SavingsAccount(1004, "Anna", 0.0, 0.01);
-
-            // downcasting
-            BusinessAccount acc4 = acc2 as BusinessAccount;
+            Console.WriteLine(account.Balance);
+            Console.WriteLine(account1.Balance);
         }
     }
 }
